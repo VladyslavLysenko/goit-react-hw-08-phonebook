@@ -5,19 +5,18 @@ import Filter from './Filter/Filter';
 import { GlobalStyle } from '../GlobalStyle';
 import { CommonBox } from './Form/Form.styled';
 
-import { useEffect} from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts } from './redux/operations';
-import { getError, getIsLoading } from './redux/selectors';
-
+import { fetchContacts } from './redux/contacts/operations';
+import { getError, getIsLoading } from './redux/contacts/selectors';
 
 export function App() {
   const dispatch = useDispatch();
-   const isLoading = useSelector(getIsLoading);
-   const error = useSelector(getError);
-    useEffect(() => {
-      dispatch(fetchContacts());
-    }, [dispatch]);
+  const isLoading = useSelector(getIsLoading);
+  const error = useSelector(getError);
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   return (
     <div>

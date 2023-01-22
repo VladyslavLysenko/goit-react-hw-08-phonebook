@@ -3,7 +3,7 @@ import { ContactItem } from './ContactItem';
 import { InnerWrap } from '../Form/Form.styled';
 import { ContactList, Item } from './Contacts.styled';
 import { useSelector } from 'react-redux';
-import { getVisibleContacts } from 'components/redux/selectors';
+import { getVisibleContacts } from 'components/redux/contacts/selectors';
 
 export const Contacts = () => {
   const visibleContacts = useSelector(getVisibleContacts);

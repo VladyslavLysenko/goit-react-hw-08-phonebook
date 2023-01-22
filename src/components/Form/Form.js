@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts } from 'components/redux/selectors';
-import { addContact } from 'components/redux/operations';
+import { getContacts } from 'components/redux/contacts/selectors';
+import { addContact } from 'components/redux/contacts/operations';
 import { InnerWrap, SectionForm, CommonButton, Input } from './Form.styled';
 
 export default function ContactForm() {
