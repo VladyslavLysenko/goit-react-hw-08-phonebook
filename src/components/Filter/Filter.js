@@ -14,7 +14,6 @@ export const Filter = () => {
         <label>
           Find contacts by Name
           <Input
-            // value={value}
             name="filter"
             onChange={evt => onChange(evt.currentTarget.value)}
             type="text"
