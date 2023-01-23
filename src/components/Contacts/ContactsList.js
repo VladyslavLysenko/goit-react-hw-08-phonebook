@@ -7,7 +7,6 @@ import { getVisibleContacts } from 'components/redux/contacts/selectors';
 
 export const ContactsList = () => {
   const visibleContacts = useSelector(getVisibleContacts);
-  console.log('visibleContacts', visibleContacts);
 
   return (
     <InnerWrap>

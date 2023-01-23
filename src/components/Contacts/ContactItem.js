@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ContactBtn, Wrapper } from './Contacts.styled';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'components/redux/contacts/operations';
-export const ContactItem = ({ contact: { id, name, phone } }) => {
+export const ContactItem = ({ contact: { id, name, number } }) => {
   const dispatch = useDispatch();
   const handleDelete = () => dispatch(deleteContact(id));
 
@@ -11,7 +11,7 @@ export const ContactItem = ({ contact: { id, name, phone } }) => {
     <>
       <Wrapper>
         <span>
-          {name}:{phone}
+          {name}:{number}
         </span>
         <ContactBtn type="button" onClick={handleDelete}>
           Delete

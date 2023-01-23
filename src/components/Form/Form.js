@@ -9,7 +9,7 @@ export default function ContactForm() {
   let contacts = useSelector(getContacts);
 
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [number, setNumber] = useState('');
 
   const handleChange = event => {
     const { name, value } = event.target;
@@ -20,7 +20,7 @@ export default function ContactForm() {
         break;
 
       case 'number':
-        setPhone(value);
+        setNumber(value);
         break;
 
       default:
@@ -31,7 +31,7 @@ export default function ContactForm() {
   const handlerSubmit = evt => {
     evt.preventDefault();
     const form = evt.currentTarget;
-    const saved = saveContact({ name, phone });
+    const saved = saveContact({ name, number });
     if (saved) {
       form.reset();
     }
@@ -47,7 +47,8 @@ export default function ContactForm() {
       window.alert(`This contact ${name} already excist `);
       return false;
     } else {
-      dispatch(addContact({ name, phone }));
+      console.log(name, number);
+      dispatch(addContact({ name, number }));
       return true;
     }
   };

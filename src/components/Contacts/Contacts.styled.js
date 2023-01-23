@@ -8,16 +8,13 @@ export const ContactList = styled.ul`
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: flex-end;
-  gap:10px;
+  gap: 10px;
 `;
 
-export const Item = styled.li`
- 
-`;
+export const Item = styled.li``;
 
 export const Wrapper = styled.div`
   ${'' /* display: 'flex'; */}
- 
 `;
 
 export const ContactBtn = styled.button`

@@ -1,3 +1,4 @@
+// import { devToolsEnhancer } from '@redux-devtools/extension';
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import {
   persistStore,
@@ -48,3 +49,4 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
+

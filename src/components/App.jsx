@@ -11,6 +11,7 @@ import { Layout } from './Layout';
 
 const RegisterPage = lazy(() => import('../components/pages/Register'));
 const LoginPage = lazy(() => import('../components/pages/Login'));
+const HomePage = lazy(() => import('../components/pages/Home'));
 const ContactsPage = lazy(() => import('../components/pages/Contacts'));
 
 export function App() {
@@ -28,7 +29,7 @@ export function App() {
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
-        {/* <Route index element={<HomePage />} /> */}
+        <Route index element={<HomePage />} />
         <Route
           path="/register"
           element={
