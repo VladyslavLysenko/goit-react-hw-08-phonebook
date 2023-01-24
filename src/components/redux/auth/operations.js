@@ -26,10 +26,10 @@ export const register = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
-     if (error.response.data.name) {
-       alert(`The User with email ${credentials.email} is already registered`);
-     }
-     return thunkAPI.rejectWithValue(error.message);
+      if (error.response.data.name) {
+        alert(`The User with email ${credentials.email} is already registered`);
+      }
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
@@ -82,7 +82,7 @@ export const refreshUser = createAsyncThunk(
       // If there is no token, exit without performing any request
       return thunkAPI.rejectWithValue('Unable to fetch user');
     }
-
+    console.log('refresh user');
     try {
       // If there is a token, add it to the HTTP header and perform the request
       setAuthHeader(persistedToken);
