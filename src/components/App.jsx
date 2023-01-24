@@ -1,6 +1,5 @@
 import { useEffect, lazy } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchContacts } from './redux/contacts/operations';
 import { useAuth } from '../hooks/useAuth';
 import { refreshUser } from '../components/redux/auth/operations';
 import { Routes } from 'react-router-dom';
@@ -9,6 +8,7 @@ import { PrivateRoute } from '../components/PrivateRoute';
 import { RestrictedRoute } from '../components/RestrictedRoute';
 import { Layout } from './Layout';
 import { Progress, Center } from '@chakra-ui/react';
+// import { fetchContacts } from './redux/contacts/operations';
 
 const RegisterPage = lazy(() => import('../pages/Register'));
 const LoginPage = lazy(() => import('../pages/Login'));
