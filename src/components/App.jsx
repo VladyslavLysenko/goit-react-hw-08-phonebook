@@ -8,6 +8,8 @@ import { Route } from 'react-router-dom';
 import { PrivateRoute } from '../components/PrivateRoute';
 import { RestrictedRoute } from '../components/RestrictedRoute';
 import { Layout } from './Layout';
+import { Progress, Center } from '@chakra-ui/react';
+
 
 const RegisterPage = lazy(() => import('../components/pages/Register'));
 const LoginPage = lazy(() => import('../components/pages/Login'));
@@ -25,7 +27,10 @@ export function App() {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+    <Center h="100px" color="black">
+      <Progress size="lg" isIndeterminate />
+      <b>Refreshing user...</b>
+    </Center>
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
