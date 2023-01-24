@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
-import { getIsLoading } from '../redux/contacts/selectors';
+import { getIsLoading } from '../components/redux/contacts/selectors';
 import { ContactsList } from 'components/Contacts/ContactsList';
-import ContactForm from '../Form/Form';
-import { Section } from '../Section/Section';
-import Filter from '../Filter/Filter';
+import ContactForm from '../components/Form/Form';
+import { Section } from '../components/Section/Section';
+import Filter from '../components/Filter/Filter';
 import { GlobalStyle } from 'GlobalStyle';
-import { CommonBox } from '../Form/Form.styled';
+import { CommonBox } from '../components/Form/Form.styled';
 import { fetchContacts } from 'components/redux/contacts/operations';
 
 export default function Contacts() {

@@ -10,11 +10,10 @@ import { RestrictedRoute } from '../components/RestrictedRoute';
 import { Layout } from './Layout';
 import { Progress, Center } from '@chakra-ui/react';
 
-
-const RegisterPage = lazy(() => import('../components/pages/Register'));
-const LoginPage = lazy(() => import('../components/pages/Login'));
-const HomePage = lazy(() => import('../components/pages/Home'));
-const ContactsPage = lazy(() => import('../components/pages/Contacts'));
+const RegisterPage = lazy(() => import('../pages/Register'));
+const LoginPage = lazy(() => import('../pages/Login'));
+const HomePage = lazy(() => import('../pages/Home'));
+const ContactsPage = lazy(() => import('../pages/Contacts'));
 
 export function App() {
   const dispatch = useDispatch();
