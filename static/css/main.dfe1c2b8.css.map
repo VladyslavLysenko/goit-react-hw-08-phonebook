@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.dfe1c2b8.css","mappings":"AAAA,yBAEI,kBAAmB,CADnB,YAAa,CAEb,QACJ,CAEA,0BAEI,UAAY,CADZ,eAEJ","sources":["components/UserMenu/UserMenu.module.css"],"sourcesContent":[".wrapper {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n}\n\n.username {\n    font-weight: 700;\n    color: white;\n}"],"names":[],"sourceRoot":""}
