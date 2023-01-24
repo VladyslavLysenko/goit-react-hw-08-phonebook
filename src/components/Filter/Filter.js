@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input, InnerWrap, SectionForm } from 'components/Form/Form.styled';
 import { useDispatch } from 'react-redux';
-import { setFilter } from 'components/redux/contacts/filterSlice';
+import { setFilter } from 'redux/contacts/filterSlice';
 export const Filter = () => {
   const dispatch = useDispatch();
   const onChange = value => {
