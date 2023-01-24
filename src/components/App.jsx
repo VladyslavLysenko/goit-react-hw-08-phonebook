@@ -21,7 +21,7 @@ export function App() {
   const { isRefreshing } = useAuth();
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    // dispatch(fetchContacts());
     dispatch(refreshUser());
   }, [dispatch]);
 
